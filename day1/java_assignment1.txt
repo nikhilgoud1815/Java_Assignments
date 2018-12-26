@@ -1,0 +1,258 @@
+
+1)	Supple value to function and return the square table that value
+Example: - If Supplied value is 5,
+Output:  Square: 
+
+
+CODE::	package javaAssignment;
+	import java.util.*;
+	public class Multiplication 
+	{
+	  static void square(int number1)    //creates a function with number1 as parameter wit data type int
+	   {
+	    for (int i=1;i<=10;i++)
+	     {
+	      int number2=number1*i;
+	      System.out.println("output of your number is ="+number2*number2 );
+             }
+	   }	
+	public static void main(String[] args) 
+	   {	
+		square(5);                // function call,it calls the function square()
+	   }
+
+	}
+
+2)	Find out if the given number is an Armstrong number.
+Logic: - if 153 is the Supplied value, then  13 + 53 + 33 = 1+125+27 = 153 
+This is the same as supplied value hence it is an Armstrong number.
+ 
+
+CODE::   package javaAssignment;
+	import java.util.*;
+	public class ArmstrongNumber
+	{
+	 public static void main(String[] args)
+           {
+	    int number, originalNumber, remainder, result = 0;
+            System.out.println("Enter a three digit integer: ");
+            Scanner sc=new Scanner(Systen.in);
+	    number=sc.nextInt();
+            originalNumber = number;
+            while (originalNumber != 0)
+              {
+               remainder = originalNumber%10;
+               result += remainder*remainder*remainder;
+               originalNumber /= 10;
+              }
+          if(result == number)
+          System.out.println("%d is an Armstrong number.");
+          else
+          System.out.println("%d is not an Armstrong number.");
+         }
+     }
+
+
+3)	Find out all the Armstrong numbers falling in the range of 100-999
+
+
+CODE::          package javaAssignment;
+		import java.util.Scanner;
+	       public class ArmstrongNumber 
+	       {
+	        public static void main(String[] args)
+	        {
+	           int  originalNumber, remainder; 
+	           int result = 0;
+                   for(int number=100;number<1000;number++)
+                     {
+                      originalNumber = number;
+                      while (originalNumber != 0)
+                        {
+                         remainder = originalNumber%10;
+                         result = result+remainder*remainder*remainder;
+                         originalNumber = originalNumber /10;
+                        }
+                      if(result == number)
+	               {
+                        System.out.println(number);
+	               }
+                      result=0;
+	            }
+	       }
+	    }
+
+
+4)Provide  marks of three subject and declare the result, result declaration is based on  below conditions:
+Condition 1: -All subjects marks is greater than 60 is Passed 
+Condition 2: -Any two subjects marks is greater than 60 is Promoted
+Condition 3: -Any one subject marks is greater than 60 or all subjects’ marks less than 60 is failed.
+
+
+CODE::		package javaAssignment;
+                import java.util.Scanner;
+                public class Marks 
+                {
+	         public static void main(String[] args)
+	          {
+	           int marksOne,marksTwo,marksThree;
+	           System.out.println("enter marksOne of student");
+	           Scanner sc1=new Scanner(System.in);
+                   marksOne=sc1.nextInt();		
+                   System.out.println("enter marksTwo of student");
+	           Scanner sc2=new Scanner(System.in);
+                   marksTwo=sc2.nextInt();	
+                   System.out.println("enter marksThree of student");
+	           Scanner sc3=new Scanner(System.in);
+	           marksThree=sc3.nextInt();	
+                  if(marksOne>60 && marksTwo>60 && marksThree>60)
+	           {
+                    System.out.println("passed");
+                   }
+                 if(marksOne>60 && marksTwo>60 && marksThree<60 ||marksOne>60 && marksTwo>60 && marksThree<60 || marksOne>60 && marksTwo>60 && marksThree<60 )
+	           {
+                    System.out.println("promoted");
+                   }
+               else
+                  {
+                     System.out.println("failed");
+                  }
+              }
+           }
+
+
+
+5)	Calculate the income tax on the basis of following  table.
+Note:-Assume slab is consider for Male, Female as well as Senior citizen
+Slab	Income Range	Tax payable in Percentage
+Slab A	0-1,80,000	Nil
+Slab B	1,81,001-3,00,000	10%
+Slab C	3,00,001-5,00,000	20%
+Slab D	5,00,001-10,00,000	30%
+Accept CTC from user and display tax amount
+
+		package javaAssignment;
+
+		import java.util.Scanner;
+		public class Tax
+                 {
+	          public static void main(String[] args)
+	           {
+		    int tax;
+	            System.out.println("enter one number");
+	            Scanner sc = new Scanner(System.in);
+	            int amount=sc.nextInt();
+                    if(amount>0 && amount<=180000)
+	              {
+                       System.out.println("tax is nill");
+                      }
+                    else if(amount>=181001 &&  amount<=300000)
+	              {
+            	       tax=amount*10/100;
+                       System.out.println(tax);
+                      }
+                   else if(amount>=300001 && amount<=500000)
+                     {
+            	      tax=amount*20/100;
+                      System.out.println(tax);
+                     }
+                  else if(amount>=500001 && amount<=1000000)
+                    {
+         	     tax=amount*30/100;
+                     System.out.println(tax);
+                    } 
+                 }
+              }
+
+
+
+
+6)	 Take complete date from the user in the form of (DD,MM,YYYY) and Display the date in the form given below:
+DD/Month-Name/YYYY
+Example: - Input 09,07,2010 
+Output: -09/July/2010
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+	    

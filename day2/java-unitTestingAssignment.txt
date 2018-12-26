@@ -1,0 +1,99 @@
+import java.util.*;
+public class Addition
+{
+int sum(int number1,int number2)
+{
+	int result=number1+number2;
+	return result;
+}
+int subtract(int number1,int number2)
+{
+	int result=number1-number2;
+	return result;
+}
+}
+
+
+AdditionTestCase.java::
+
+import static org.junit.Assert.*;
+import org.junit.AfterClass;
+import org.junit.Test;
+public class AdditionTestCase {
+	@Test
+	public void AdditionOfPositiveNumbers()
+	{
+		Addition positive=new Addition();
+		int positiveResult=positive.sum(5,10);
+		assertEquals(15,positiveResult);
+	}	
+	
+	@Test
+	public void AdditionOfOnePositiveNumber()
+	{
+		Addition positiveNegative=new Addition();
+		int oneNegative=positiveNegative.sum(-5,10);
+		assertEquals(5,oneNegative);
+	}
+	
+	@Test
+	public void AdditionOfTwoNegativeNumbers()
+	{
+		Addition Negative=new Addition();
+		int twoNegative=Negative.sum(-5,-5);
+		assertEquals(-10,twoNegative);
+	}
+	@Test
+	public void AdditionOfTwoZeroes()
+	{
+		Addition zeroes=new Addition();
+		int twoZeroes=zeroes.sum(0,0);
+		assertEquals(0,twoZeroes);
+	}	
+}	
+
+
+SubtractionTestCase.java::
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+public class SubtractionTestCase {
+	@Before
+	public void BeforeFunction()
+	{
+		System.out.println("Hello functions");
+	}
+
+	@Test
+	public void SubtractionOfPositiveNumbers()
+	{
+		Addition positive=new Addition();
+		int positiveResult=positive.subtract(5,10); 
+		assertEquals(-5,positiveResult);
+	}	
+	@Test
+	public void SubtractionOfOnePositiveNumber()
+	{
+		Addition positiveNegative=new Addition();
+		int oneNegative=positiveNegative.subtract(-5,10);
+		assertEquals(-15,oneNegative);
+	}
+	@Test
+	public void SubtractionOfTwoNegativeNumbers()
+	{
+		Addition Negative=new Addition();
+		int twoNegative=Negative.subtract(-5,-5);
+		assertEquals(0,twoNegative);
+	}
+	@Test
+	@Ignore
+	public void SubtractionOfTwoZeroes()
+	{
+		Addition zeroes=new Addition();
+		int twoZeroes=zeroes.subtract(0,0);
+		assertEquals(0,twoZeroes);
+	}	
+	
+}
